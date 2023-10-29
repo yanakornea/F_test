@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        /* Styles for the popup container */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        /* Styles for the popup content */
+        .popup-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 70%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styles for checkboxes and labels */
+        .checkbox-label {
+            display: block;
+        }
+
+        /* Styles for the close button */
+        .close-button {
+            float: right;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="mission-list"></div>
+
+    <!-- <button class="open-mission-popup" id="open-mission-popup">Open Popup</button> -->
+    
+    <!-- The Popup Container -->
+    <div id="popup" class="popup-container">
+        <!-- Popup Content -->
+        <div class="popup-content">
+            <button  class="close-button" id="close-button">Close</button>
+            <h2>Checkbox Form Popup</h2>
+            <form id="checkbox-form">
+                <div id="form-checkbox-form"></div>
+                <button type="button" id="mission-submit-button">Complete</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="/teacher_scripts/missionpage.js"></script>
+</body>
+</html>

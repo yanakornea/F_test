@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Popup Checkbox Form Example</title>
+        <style>
+            /* Styles for the popup container */
+            .popup-container {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                z-index: 1;
+            }
+    
+            /* Styles for the popup content */
+            .popup-content {
+                background-color: #fff;
+                margin: 15% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 70%;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+    
+            /* Styles for checkboxes and labels */
+            .checkbox-label {
+                display: block;
+            }
+    
+            /* Styles for the close button */
+            .close-button {
+                float: right;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="openPopup()">Open Popup</button>
+    
+        <!-- The Popup Container -->
+        <div id="popup" class="popup-container">
+            <!-- Popup Content -->
+            <div class="popup-content">
+                <span onclick="closePopup()" class="close-button">&times;</span>
+                <h2>Checkbox Form Popup</h2>
+                <form id="checkbox-form">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="option1" value="Option 1"> Option 1
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="option2" value="Option 2"> Option 2
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="option3" value="Option 3"> Option 3
+                    </label>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    
+        <script>
+            // Function to open the popup
+            function openPopup() {
+                document.getElementById("popup").style.display = "block";
+            }
+    
+            // Function to close the popup
+            function closePopup() {
+                document.getElementById("popup").style.display = "none";
+            }
+    
+            // Function to handle form submission
+            document.getElementById("checkbox-form").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent form submission
+                const formData = new FormData(this);
+                const selectedOptions = [];
+                
+                
+                for (const pair of formData.entries()) {
+                    // if (pair[1] === "on") {
+                    //     selectedOptions.push(pair[0]);
+                    //     console.log(pair[0])
+                    // }
+                    console.log(pair[1])
+                }
+
+                // console.log(formData.entries())
+                
+                // console.log(selectedOptions)
+            });
+        </script>
+    </body>
+</html>

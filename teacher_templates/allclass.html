@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <h2>Add class</h2>
+        <button id="showFormBtn">show form</button>
+
+        <div id="popup">
+            <form id="myForm">
+                <label for="class_name">Name:</label>
+                <input type="text" id="class_name" name="class_name">
+    
+            
+                <label for="class_code">code:</label>
+                <input id="class_code" name="class_code">
+                
+            
+                <button type="submit" id="submit-button">Submit</button>
+                <button type="button" id="closeFormBtn">close</button>
+            </form>
+        </div>
+
+        <div id="resultDiv"></div>
+    </div>
+
+
+    <div class="class-detail"></div>
+    <div class="testy_data"></div>
+
+    
+    <script type="module" src="/teacher_scripts/classroom.js"></script>
+    <script type="module" src="/teacher_scripts/addclass.js"></script>
+    <script type="module" src="/scripts/main.js"></script>
+</body>
+</html>
